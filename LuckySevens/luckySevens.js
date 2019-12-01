@@ -1,3 +1,9 @@
+/* <!--
+    Name: Kevin Lehman
+    Date Created: 11/25/2019
+    Most recent revision: 11/30/2019
+*/
+
 function clearErrors() {
     for (var loopCounter = 0;
         loopCounter < document.forms["luckySevens"].elements.length;
