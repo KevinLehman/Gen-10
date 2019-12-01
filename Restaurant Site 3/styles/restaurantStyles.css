@@ -1,0 +1,88 @@
+/*
+Creator: Kevin Lehman
+Date created: 11/27/2019
+Date last modified: 11/31/2019
+*/
+
+footer {
+  background-color: #db0404;
+  color: #fff;
+  box-shadow: 0 50vh 0 50vh #db0404;
+  height: 100px;
+  text-align: center;
+  padding: 30px 10px 20px 10px;
+}
+
+h1, h2, h3 {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+#Restaurant-Logo, #Menu, #Contact-Background{
+  background-color: #04DB70;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#nav {
+   background-color: #DBDB04;
+   border-top: thin #5b7d87 solid;
+   border-bottom: thin #5b7d87 solid;
+   padding-top: 12px;
+   padding-bottom: 12px;
+}
+
+nav .btn {
+  margin-left: 10px;
+
+}
+
+.btn {
+  background-color: #db0404;
+  color: #fff;
+}
+
+nav .btn:hover {
+  font-weight: bold;
+}
+
+nav .btn:active {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#beverages {
+  margin: auto;
+  float: none;
+}
+
+.required {
+  font-weight: bold;
+}
+
+.carousel-item {
+  height:75px;
+}
+
+.carousel-item img{
+  height: 75px;
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 30%;
+  left: 40%;
+  z-index: 20;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel-inner .carousel-item {
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+  Name: Kevin Lehman
+  Date Created: 11/25/2019
+  Most Recent Revision: 11/31/2019
+-->
+
+<html lang="en">
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <title>Contact Us</title>
+
+       <script type="text/javascript" src="scripts/Restaurant.js"></script>
+
+      <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+    <header class ="jumbotron mb-0" style="background-color:#db0404">
+      <h1>Sammies and a salad</h1>
+      <h2 class="font-italic">The home of the most exquisite sandwiches around.</h2>
+      <h3 class="text-right mt-5">Coming to a new location soon!</h3>
+    </header>
+
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="img-fluid w-100" src="images/Slide-Background.jpg" alt="First slide">
+          <div class="carousel-content">
+            <p>We're opening a new location!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid w-100" src="images/Slide-Background.jpg" alt="Second slide">
+          <div class="carousel-content">
+            <p>We're rolling out our seasonal menu, with special options for this season.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="img-fluid w-100" src="images/Slide-Background.jpg" alt="Third slide">
+          <div class="carousel-content">
+            <p>The Drink of time Month is SG Special Brew.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="nav" class="row">
+      <div class="col-12">
+        <nav>
+          <a class="btn badge-pill" href="home.html"><i class="fa fa-home"></i>Home</a>
+          <a class="btn badge-pill" href="menu.html">Menu</a>
+          <a class="btn badge-pill" href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+
+    <div id="Contact-Background">
+      <div class="container">
+        <form name="contactUs" onsubmit="return validateItems();" class="form-horizontal">
+          <div class="form-group row">
+            <label for="name" class="control-label col-4 text-right pt-2">Name:</label>
+            <div class="col-4 mr-4">
+              <input type="text" id="name" class="form-control" name="name"><br />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="control-label col-4 text-right pt-2">Email:</label>
+            <div class="col-4 mr-4">
+              <input type="email" id="email" class="form-control" name="email"><br />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="phone" class="control-label col-4 text-right pt-2">Phone Number:</label>
+            <div class="col-4 mr-4">
+              <input type="tel" id="phone" class="form-control" name="phone"><br />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="reason" class="control-label col-4 text-right pt-2">Reason for Inquiry:</label>
+              <div class="col-4 mr-4">
+                <select class="form-control" id="reason" name="reason">
+                  <option value="default" selected>Catering</option>
+                  <option value="party">Private Party</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select><br />
+              </div>
+          </div>
+          <div class="form-group row">
+            <label for="info" class="control-label col-4 text-right pt-2">Additional Information:</label>
+              <div class="col-4 mr-4">
+                <textarea class="form-control" id="info" name="info" rows="5"></textarea><br />
+              </div>
+          </div>
+          <div class="form-group row">
+            <label for="firstTime" class="control-label col-4 text-right">Have you been to the restaurant?</label>
+              <div class="form-check form-check-inline pl-3">
+                <input class="form-check-input" type="radio" id="choice1" name="questionnaire" value="no">
+                  <label class="form-check-label pr-5" for="choice1" class="control-label">No</label>
+                <input class="form-check-input" type="radio" id="choice2" name="questionnaire" value="yes">
+                  <label class="form-check-label" for="choice2" class="control-label">Yes</label><br />
+              </div>
+          </div>
+          <div class="form-group row">
+            <label for="contactDay" class="control-label col-4 text-right">Best days to contact you:</label>
+              <div class="form-check form-check-inline pl-3">
+                <input class="form-check-input" type="checkbox" id="M" name="contactDay" value="M">
+                  <label class="form-check-label pr-4" for="M" class="control-label">M</label>
+                <input class="form-check-input" type="checkbox" id="T" name="contactDay" value="T">
+                  <label class="form-check-label pr-4" for="T" class="control-label">T</label>
+                <input class="form-check-input" type="checkbox" id="W" name="contactDay" value="W">
+                  <label class="form-check-label pr-4" for="W" class="control-label">W</label>
+                <input class="form-check-input" type="checkbox" id="Th" name="contactDay" value="Th">
+                  <label class="form-check-label pr-4" for="Th" class="control-label">Th</label>
+                <input class="form-check-input" type="checkbox" id="F" name="contactDay" value="F">
+                  <label class="form-check-label" for="F" class="control-label">F</label><br />
+              </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-3 mx-auto">
+              <button type="submit" id="sumbitButton" class="btn badge-pill">Send Request</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+      <footer>
+          <p> 9999 Amazing Way, Imagination Land, North Pole, 87234<br />
+          1 (800) 223-9987</p>
+      </footer>
+
+      <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+      <<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>
